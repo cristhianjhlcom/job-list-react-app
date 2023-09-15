@@ -1,0 +1,21 @@
+:root {
+    --white-color: #fff;
+    --black-color: #1a1a1a;
+
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --light-grayish-cyan: hsl(180, 52%, 96%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+    --font-family: 'League Spartan', Tahoma, sans-serif;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --radius-sm: 5px;
+}
+
+body {
+    background-color: var(--light-grayish-cyan);
+    font-family: var(--font-family);
+}
