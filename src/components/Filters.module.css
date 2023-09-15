@@ -1,0 +1,33 @@
+.wrapper {
+    max-width: 1440px;
+    width: 90%;
+    margin: -30px auto 0;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 25px -15px var(--desaturated-dark-cyan);
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.clear {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--desaturated-dark-cyan);
+    font-weight: var(--fw-bold);
+}
+
+.clear:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
