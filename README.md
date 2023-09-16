@@ -1,114 +1,76 @@
-# Frontend Mentor - Job listings with filtering
+# Job List React APP 📃
 
-![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)
+Aplicación simple para mostrar una lista de trabajo disponibles, se puede filtrar por lenguales o herramientas solicitadas en el trabajo.
 
-## Welcome! 👋
+## Características
 
-Thanks for checking out this front-end coding challenge.
+- Filtrar trabajos en base a los lenguajes o herramientas seleccionadas.
+- Mostrar de manera optima la aplicación para cualquier dispositivos.
+- Renderizar lista de trabajos desde un JSON.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Requisitos Previos
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+- NodeJS v16.17.0 o Superior
+- NPM v8.19.2 o Superior
+- Git v2.30.2 o Superior
+- ReactJS v18.2.0
 
-## The challenge
+## Instalación
 
-Your challenge is to build out this job listing page and get it looking as close to the design as possible.
+1. Clona este repositorio en tu máquina local:
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+```git clone [URL]```
 
-Your users should be able to:
+2. Accede al directorio del proyecto:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Filter job listings based on the categories
+```cd job-listing-react-app```
 
-### Filtering
+3. Instala las dependencias del proyecto:
 
-#### Option 1
+```npm install```
 
-Filter job listings based on the categories using the HTML `data-` attribute. In this option, you'd use the hardcoded content that already exists in the [index.html](./index.html) file.
 
-The categories are:
+## Ejecución
 
-- Role: Frontend, Backend, Fullstack
-- Level: Junior, Midweight, Senior
-- Languages: Python, Ruby, JavaScript, HTML, CSS
-- Tools: React, Sass, Vue, Django, RoR (Ruby on Rails)
+Una vez que hayas completado la instalación y configuración, puedes ejecutar el servidor de desarrollo de la siguiente manera:
 
-So, if a job listing is for has the following categories `Frontend, Junior, JavaScript, React` your HTML data attributes would look like this `data-role="frontend" data-level="junior" data-languages="javascript" data-tools="react"`.
+```npm run dev```
 
-#### Option 2
+Esto iniciará el servidor en modo de desarrollo. La API estará disponible en ```http://localhost:5173```
 
-Use the [data.json](./data.json) file to pull the data and then dynamically add the content. This would be perfect if you're looking to practice a JS library/framework like React, Vue, or Svelte.
+## Linter y Formatter
 
-To add a filter, the user needs to click on the tablets on the right side of the listing on desktop or the bottom on mobile. For each filter added, only listings containing all selected filters should be returned.
+Este proyecto utiliza __Rome__ como linter y formatter para mantener un código limpio y consistente. Asegúrate de ejecutar las siguientes tareas regularmente:
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+Para verificar el código:
 
-## Where to find everything
+```npm run lint```
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+Para formatear el código:
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+```npm run format```
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## Recursos
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+1. Puedes encontrar este challenge en [Frontend Mentor - Job listings with filtering](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+## Crédito
 
-## Building your project
+¡Hola a todos! Quiero invitarte a seguirme en mis redes sociales y plataformas, donde realizamos sesiones de código en vivo, compartimos consejos de desarrollo y exploramos el apasionante mundo de la tecnología. Durante una de nuestras transmisiones en vivo, creamos juntos un proyecto impresionante.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## Redes Sociales
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+🐦 **Twitter:** [@cristhianjhlcom](https://twitter.com/cristhianjhlcom)
+- Sigue mi cuenta de Twitter para estar al tanto de las últimas actualizaciones sobre sesiones en vivo, tutoriales y noticias tecnológicas emocionantes.
 
-## Deploying your project
+📺 **YouTube:** [Canal de YouTube](https://youtube.com/@cristhianjhlcom)
+- En mi canal de YouTube encontrarás el video completo de la sesión de código en vivo. ¡Suscríbete para no perderte futuros contenidos y tutoriales!
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+📹 **Twitch:** [Canal de Twitch](https://twitch.tv/cristhianjhlcom)
+- La sesión de código en vivo tuvo lugar en mi canal de Twitch. Si te encanta el desarrollo de software y la programación en vivo, ¡sígueme en Twitch y activa las notificaciones para recibir alertas sobre futuras transmisiones!
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Agradezco mucho tu apoyo y estoy emocionado de seguir compartiendo conocimientos y experiencias con todos ustedes. Únete a nuestra comunidad en línea y participa en nuestras transmisiones en vivo mientras exploramos el emocionante mundo del desarrollo.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+¡Gracias por ser parte de esta increíble comunidad de desarrolladores! 🚀👨‍💻👩‍💻
 
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+[cristhianjhl.com](https://cristhianjhl.com/)
