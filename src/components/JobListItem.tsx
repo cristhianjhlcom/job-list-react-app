@@ -52,7 +52,6 @@ export default function JobListItem({
 							key={tecnology}
 							value={tecnology}
 							handleAdd={() => {
-								console.log("hel");
 								handleAddFilter(tecnology);
 							}}
 						/>

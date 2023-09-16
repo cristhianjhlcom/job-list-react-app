@@ -1,19 +1,10 @@
 import { ReactNode, createContext, useEffect, useState } from "react";
 import data from "../data/data.json";
-import { Job } from "../type/Job";
-
-type JobListContextType = {
-	data: Job[];
-	filters: Set<string>;
-	loading: boolean;
-	error: null | string;
-	handleClearFilters: () => void;
-	handleAddFilter: (filter: string) => void;
-	handleRemoveFilter: (filter: string) => void;
-};
+import { Job, JobListContextType, JobState } from "../type/Job";
 
 export const JobListContext = createContext<JobListContextType>({
 	data: [],
+	filteredJobs: [],
 	filters: new Set<string>(),
 	loading: false,
 	error: null,
@@ -26,39 +17,28 @@ type Props = {
 	children: ReactNode;
 };
 
-type JobState = {
-	data: Job[];
-	filters: Set<string>;
-	loading: boolean;
-	error: null | string;
-};
-
 export function JobListContextProvider({ children }: Props) {
 	const [state, setState] = useState<JobState>({
 		data,
+		filteredJobs: [],
 		filters: new Set([]),
 		loading: false,
 		error: null,
 	});
 
 	useEffect(() => {
-		const filteredJobs = filtersJobs();
+		const filteredJobs = state.filters.size === 0 ? [] : filtersJobs();
 		setState((prev) => ({
 			...prev,
-			data: filteredJobs.length ? filteredJobs : data,
+			filteredJobs,
 		}));
 	}, [state.filters]);
 
 	function filtersJobs(): Job[] {
-		const filteredJobs: Job[] = [];
-		for (const element of state.filters) {
-			for (const job of state.data) {
-				if (job.languages.includes(element) || job.tools.includes(element)) {
-					filteredJobs.push(job);
-				}
-			}
-		}
-		return filteredJobs;
+		return state.data.filter((job) => {
+			const filters = [...job.languages, ...job.tools];
+			return filters.some((filter) => state.filters.has(filter));
+		});
 	}
 
 	function handleClearFilters(): void {
@@ -66,7 +46,7 @@ export function JobListContextProvider({ children }: Props) {
 		setState((prev) => ({
 			...prev,
 			filters: emptyFilters,
-			data,
+			filteredJobs: [],
 		}));
 	}
 
@@ -74,7 +54,7 @@ export function JobListContextProvider({ children }: Props) {
 		setState((prev) => ({
 			...prev,
 			filters: state.filters.add(filter),
-			data: filtersJobs(),
+			filteredJobs: filtersJobs(),
 		}));
 	}
 
@@ -85,7 +65,7 @@ export function JobListContextProvider({ children }: Props) {
 		setState((prev) => ({
 			...prev,
 			filters: removedFilter,
-			data: filtersJobs(),
+			filteredJobs: filtersJobs(),
 		}));
 	}
 
@@ -93,6 +73,7 @@ export function JobListContextProvider({ children }: Props) {
 		<JobListContext.Provider
 			value={{
 				data: state.data,
+				filteredJobs: state.filteredJobs,
 				filters: state.filters,
 				loading: state.loading,
 				error: state.error,
